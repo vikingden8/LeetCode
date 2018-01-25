@@ -9,7 +9,7 @@ import java.util.Map;
  * Author : Viking Den<dengwj@gionee.com>
  * Time : 1/25/18 4:30 PM
  */
-public class S01_Two_Sum extends BaseSolution{
+public class S001_Two_Sum extends BaseSolution{
 
     @Override
     protected void solution() {
@@ -39,7 +39,7 @@ public class S01_Two_Sum extends BaseSolution{
     }
 
     public static void main(String[] args) {
-        S01_Two_Sum question = new S01_Two_Sum();
+        S001_Two_Sum question = new S001_Two_Sum();
         question.solution();
     }
 }

@@ -12,13 +12,14 @@ Example:
 Given nums = [2, 7, 11, 15], target = 9,
 
 Because nums[0] + nums[1] = 2 + 7 = 9,
+
 return [0, 1].
 ```
 
 #### Implementations
 
-[Java]()
+[Java](../Java/src/main/com/viking/leetcode/S001_Two_Sum.java)
 
-[Python]()
+[Python](../Python/S001_Two_Sum.py)
 
 [C-Not implemented yet](S00_Not_Implemented_Yet.md)
