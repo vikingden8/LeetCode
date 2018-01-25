@@ -21,4 +21,4 @@ return [0, 1].
 
 [Python]()
 
-[C-Not implemented yet](Solutions/S00_Not_Implemented_Yet.md)
+[C-Not implemented yet](S00_Not_Implemented_Yet.md)
