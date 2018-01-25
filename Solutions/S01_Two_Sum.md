@@ -18,7 +18,7 @@ return [0, 1].
 
 #### Implementations
 
-[Java](../Java/src/main/com/viking/leetcode/S001_Two_Sum.java)
+[Java](../Java/src/main/java/com/viking/leetcode/S001_Two_Sum.java)
 
 [Python](../Python/S001_Two_Sum.py)
 
