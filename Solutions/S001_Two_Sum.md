@@ -22,4 +22,4 @@ return [0, 1].
 
 [Python](../Python/S001_Two_Sum.py)
 
-[C-Not implemented yet](S00_Not_Implemented_Yet.md)
+[C](S000_Not_Implemented_Yet.md)
