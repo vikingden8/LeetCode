@@ -6,4 +6,6 @@
 
 ### Solutions
 
-[1. Two Sum](Solutions/S01_Two_Sum.md)
+[1. Two Sum](Solutions/S001_Two_Sum.md)
+
+[2. Add Two Numbers](Solutions/S002_Add_Two_Numbers.md)
