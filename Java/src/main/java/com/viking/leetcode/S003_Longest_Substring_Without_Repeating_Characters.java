@@ -2,7 +2,9 @@ package com.viking.leetcode;
 
 import com.viking.leetcode.base.BaseSolution;
 
+import java.util.HashMap;
 import java.util.HashSet;
+import java.util.Map;
 import java.util.Set;
 
 /**
@@ -11,23 +13,24 @@ import java.util.Set;
  */
 public class S003_Longest_Substring_Without_Repeating_Characters extends BaseSolution {
 
-
-
     @Override
     protected void solution() {
-        String content = "abcabcbbb" ;
+        String content = "abcabcbb" ;
         solutionBasic(content) ;
+        solutionByMap(content) ;
+        solutionBySet(content) ;
     }
 
     private void solutionBasic(String content){
-        System.out.println("------------------solution 1-------------------");
+        System.out.println("------------------solution brute force-------------------");
         int n = content.length() ;
         int answer = 0 ;
         for (int i = 0; i < n ; i++ ){
             for (int j = i + 1; j <= n ; j++ ){
-                if (allUnique(content, i, j)){
-                    answer = Math.max(answer, j - i) ;
+                if (!allUnique(content, i, j)){
+                    break ;
                 }
+                answer = Math.max(answer, j - i) ;
             }
         }
         System.out.println("answer : " + answer);
@@ -42,6 +45,38 @@ public class S003_Longest_Substring_Without_Repeating_Characters extends BaseSol
         }
         return true ;
     }
+
+    private void solutionByMap(String content) {
+        System.out.println("------------------solution by Map-------------------");
+        int answer = 0 ;
+        Map<Character, Integer> container = new HashMap<>() ;
+        for (int i = 0 , j = 0 ; i < content.length(); i++){
+            if (container.containsKey(content.charAt(i))){
+                j = Math.max(j, container.get(content.charAt(i))) ;
+            }
+            answer = Math.max(answer, i - j + 1) ;
+            container.put(content.charAt(i), i + 1) ;
+        }
+        System.out.println("answer : " + answer);
+    }
+
+    private void solutionBySet(String content) {
+        System.out.println("------------------solution by Set-------------------");
+        int answer = 0 ;
+        Set<Character> container = new HashSet<>() ;
+        int i = 0, j = 0 ;
+        while (i < content.length() && j < content.length()){
+            if (container.contains(content.charAt(i))){
+                container.remove(content.charAt(j++)) ;
+            }else{
+                container.add(content.charAt(i++)) ;
+                answer = Math.max(answer, i - j) ;
+            }
+        }
+        System.out.println("answer : " + answer);
+    }
+
+
 
 
     public static void main(String[] args) {
